@@ -1,0 +1,85 @@
+.game-container {
+    width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.health-bars {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.health-bar {
+    width: 200px;
+}
+
+.health {
+    background: #ff4444;
+    height: 20px;
+    line-height: 20px;
+    color: white;
+    transition: width 0.3s;
+}
+
+.arena {
+    width: 100%;
+    height: 300px;
+    background: #f0f0f0;
+    position: relative;
+    border: 2px solid #333;
+}
+
+.warrior {
+    width: 40px;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    transition: left 0.2s;
+}
+
+.red {
+    background: red;
+    left: 50px;
+}
+
+.blue {
+    background: blue;
+    right: 50px;
+}
+
+.sword {
+    width: 30px;
+    height: 5px;
+    background: silver;
+    position: absolute;
+    top: 20px;
+}
+
+.red .sword {
+    right: -30px;
+}
+
+.blue .sword {
+    left: -30px;
+}
+
+.attacking .sword {
+    animation: attack 0.3s;
+}
+
+.defending {
+    border: 3px solid yellow;
+}
+
+.game-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+@keyframes attack {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+}t
